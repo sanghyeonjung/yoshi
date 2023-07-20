@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.DocumentSnapshot
@@ -50,6 +51,15 @@ class VoteFragment : Fragment() {
         val voteTitle = view?.findViewById<TextView>(R.id.topic_title)
         val voteImg = view?.findViewById<ImageView>(R.id.MainimageView)
         val imageUrl = document.getString("image")
+        val voteProgress = view?.findViewById<ProgressBar>(R.id.vote_progress)
+
+
+        // get vote count from the document
+        val yesVotes = document.getLong("yesVotes") ?: 0
+        val noVotes = document.getLong("noVotes") ?: 0
+        val totalVotes = yesVotes + noVotes
+
+
         //log image url
         Log.d("VoteFragment", "imageUrl: $imageUrl")
 
@@ -61,10 +71,16 @@ class VoteFragment : Fragment() {
             .load(imageUrl)
             .into(voteImg!!)
 
+        if (totalVotes != 0L) {
+            val yesPercentage = (yesVotes.toDouble() / totalVotes.toDouble()) * 100
+            voteProgress?.progress = yesPercentage.toInt()
+        }
 
         //voteDescription?.text = document.getString("description")
         // 찬반 투표 옵션에 따라서 추가적인 UI 업데이트가 필요할 수 있습니다.
     }
+
+
     fun fetchDocumentData(documentId: String) {
         val db = Firebase.firestore
         db.collection("votes")
@@ -76,5 +92,8 @@ class VoteFragment : Fragment() {
                 }
             }
     }
+
+
+
 
 }
