@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MakeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/make_text_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#1E1E1E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="83dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="질문작성" />
+
+    <TextView
+        android:id="@+id/make_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목"
+        android:textColor="#1E1E1E"
+        android:textSize="15sp"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintTop_toBottomOf="@id/make_text_quiz"
+        app:layout_constraintStart_toStartOf="@id/make_text_quiz"
+        android:layout_marginTop="30dp"
+        />
+
+    <EditText
+        android:id="@+id/make_title_edit"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/make_text_title"
+        app:layout_constraintTop_toBottomOf="@id/make_text_title"
+        android:layout_marginTop="10dp"
+        android:hint="이슈를 잘 들어낼 수 있는 제목을 입력해주세요."
+        android:textSize="12dp"
+        android:backgroundTint="#EFEFEF"
+        />
+
+    <TextView
+        android:id="@+id/make_text_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="참고자료"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintTop_toBottomOf="@id/make_title_edit"
+        app:layout_constraintStart_toStartOf="@id/make_title_edit"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/make_data_edit"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/make_text_data"
+        app:layout_constraintTop_toBottomOf="@id/make_text_data"
+        android:layout_marginTop="10dp"
+        android:hint="참고한 기사나 유튜브의 링크를 입력해주세요."
+        android:textSize="12dp"
+        android:backgroundTint="#EFEFEF"
+        />
+
+
+    <TextView
+        android:id="@+id/make_text_explanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상세설명"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintTop_toBottomOf="@id/make_data_edit"
+        app:layout_constraintStart_toStartOf="@id/make_data_edit"
+        android:layout_marginTop="15dp"
+        />
+
+    <EditText
+        android:id="@+id/make_explanation_edit"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/make_text_explanation"
+        app:layout_constraintTop_toBottomOf="@id/make_text_explanation"
+        android:layout_marginTop="10dp"
+        android:hint="제목과 관련된 상세 설명을 입력해주세요."
+        android:textSize="12dp"
+        android:backgroundTint="#EFEFEF"
+        />
+
+    <TextView
+        android:id="@+id/make_text_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주제"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintTop_toBottomOf="@id/make_explanation_edit"
+        app:layout_constraintStart_toStartOf="@id/make_explanation_edit"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/subject_gender_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/make_text_subject"
+        app:layout_constraintTop_toBottomOf="@id/make_text_subject">
+
+        <RadioButton
+            android:id="@+id/subject_btn1"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+
+            android:text="MZ이슈"
+            />
+
+        <RadioButton
+            android:id="@+id/subject_btn2"
+            android:layout_marginStart="10dp"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="XY이슈" />
+
+        <RadioButton
+            android:id="@+id/subject_btn3"
+            android:layout_marginStart="10dp"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="사회적 이슈" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/make_text_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="태그"
+        android:textSize="15sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/pretendardsemibold"
+        app:layout_constraintTop_toBottomOf="@id/make_text_subject"
+        app:layout_constraintStart_toStartOf="@id/make_text_subject"
+        android:layout_marginTop="60dp"
+        />
+
+
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/tag_gender_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="@id/make_text_tag"
+        app:layout_constraintTop_toBottomOf="@id/make_text_tag">
+
+        <RadioButton
+            android:id="@+id/tag_btn1"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+
+            android:text="#환경"
+            />
+
+        <RadioButton
+            android:id="@+id/tag_btn2"
+            android:layout_marginStart="10dp"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="#세대" />
+
+        <RadioButton
+            android:id="@+id/tag_btn3"
+            android:layout_marginStart="10dp"
+            android:layout_width="111dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+            android:text="#인간관계" />
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/make_done_btn"
+        android:layout_width="316dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/btn_background"
+        android:text=" 작성 완료"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

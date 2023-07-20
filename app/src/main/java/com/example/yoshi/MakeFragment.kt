@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.yoshi.R
 
-class ChattingFragment : Fragment() {
+class MakeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -16,6 +16,6 @@ class ChattingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chatting, container, false)
+        return inflater.inflate(R.layout.fragment_make, container, false)
     }
 }

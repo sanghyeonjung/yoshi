@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
                                 .replace(R.id.fl_container, boardFragment).commit()
                         }
                         R.id.third -> {
-                            val settingFragment = ChattingFragment()
+                            val makeFragment = MakeFragment()
                             supportFragmentManager.beginTransaction()
-                                .replace(R.id.fl_container, settingFragment).commit()
+                                .replace(R.id.fl_container, makeFragment).commit()
                         }
                     }
                     true

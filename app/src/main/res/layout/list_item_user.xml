@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/main_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MZ"
+        android:textSize="20sp"
+        android:textColor="#1E1E1E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/pretendardbold"
+        />
+
+
+    <TextView
+        android:id="@+id/sub_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="엄무시간에 에어팟 사용?"
+        android:textSize="20sp"
+        android:textColor="#1E1E1E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/main_subject"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/pretendardsemibold"
+        />
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="업무시간에 이어폰을 꽂은 신입. 선입이 보기엔 일이 아닌 노래에 집중한 것 같다. 하지만 신입은 일의 능률을 주장하며 자율적으로 허락해야한다고 말한 상황"
+        android:textSize="14sp"
+        android:textColor="#1E1E1E"
+        app:layout_constraintTop_toBottomOf="@id/main_subject"
+        app:layout_constraintStart_tostartOf="@id/main_subject"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/pretendardsemibold"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
