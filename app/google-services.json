@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "408149701539",
+    "firebase_url": "https://yoshi-a7142-default-rtdb.firebaseio.com",
+    "project_id": "yoshi-a7142",
+    "storage_bucket": "yoshi-a7142.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408149701539:android:912f9c6d7c8fb690162016",
+        "android_client_info": {
+          "package_name": "com.example.yoshi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408149701539-ijgcbkdt7g19thgcftsi9qbn0levavdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTnPC1YYwOoIEGUQlPQNcsoiYAiUxkKJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408149701539-ijgcbkdt7g19thgcftsi9qbn0levavdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408149701539:android:bb4ebff213d7eee6162016",
+        "android_client_info": {
+          "package_name": "com.yoshi.hackatonapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408149701539-g8h66c6glcb944j7vu43okf7p395rur0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yoshi.hackatonapp",
+            "certificate_hash": "6a21f13a2962d31541bfe574c66af6ab02be0724"
+          }
+        },
+        {
+          "client_id": "408149701539-ijgcbkdt7g19thgcftsi9qbn0levavdi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTnPC1YYwOoIEGUQlPQNcsoiYAiUxkKJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408149701539-ijgcbkdt7g19thgcftsi9qbn0levavdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

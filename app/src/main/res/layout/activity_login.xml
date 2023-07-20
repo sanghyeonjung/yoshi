@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/login_text_introduce1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:text="당신의 건강을 더 행복하게"
+        android:textSize="24dp"
+        />
+    <TextView
+        android:id="@+id/login_text_introduce2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/login_text_introduce1"
+        app:layout_constraintTop_toBottomOf="@id/login_text_introduce1"
+        android:textColor="@color/black"
+        android:text="당신의 건강을 더 요시하게"
+        android:textSize="24dp"
+        />
+    <TextView
+        android:id="@+id/login_text_introduce3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/login_text_introduce2"
+        app:layout_constraintTop_toBottomOf="@id/login_text_introduce2"
+        android:textColor="#B8B8B8"
+        android:text="회원 서비스를 위해 로그인 해주세요."
+        android:textSize="15dp"
+        />
+
+    <EditText
+        android:id="@+id/login_email_edit"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/login_text_introduce3"
+        app:layout_constraintTop_toBottomOf="@id/login_text_introduce3"
+        android:hint="아이디"
+        android:textSize="15dp"
+        android:backgroundTint="#EFEFEF"
+        />
+
+    <EditText
+        android:id="@+id/login_password_edit"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/login_email_edit"
+        app:layout_constraintTop_toBottomOf="@id/login_email_edit"
+        android:hint="비밀번호"
+        android:textSize="15dp"
+        android:backgroundTint="#EFEFEF"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_login_btn"
+        android:layout_width="316dp"
+        android:layout_height="46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_password_edit"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/btn_background"
+        android:text="로그인"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/login_signUp_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_login_btn"
+        android:text="아이디 혹은 비밀번호를 잊으셨나요?"
+        android:textColor="#B8B8B8"
+        android:textSize="15sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

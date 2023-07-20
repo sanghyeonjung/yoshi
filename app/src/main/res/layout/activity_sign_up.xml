@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.SignUpActivity">
+
+    <EditText
+        android:id="@+id/signup_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_background"
+        android:hint="Name"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signup_email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_background"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_name_edit" />
+
+    <EditText
+        android:id="@+id/signup_password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edit_background"
+        android:hint="password"
+        android:inputType="numberPassword"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_email_edit" />
+
+    <TextView
+        android:id="@+id/signup_gender_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별 : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_gender_radio"
+        app:layout_constraintEnd_toStartOf="@id/signup_gender_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_gender_radio" />
+
+    <RadioGroup
+        android:id="@+id/signup_gender_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/signup_gender_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_password_edit">
+
+        <RadioButton
+            android:id="@+id/rg_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="남자" />
+
+        <RadioButton
+            android:id="@+id/rg_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="여자" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/signup_age_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나이 : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_age_spinner"
+        app:layout_constraintEnd_toStartOf="@id/signup_age_spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_age_spinner" />
+
+    <Spinner
+        android:id="@+id/signup_age_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/signup_age_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_gender_radio"></Spinner>
+
+    <TextView
+        android:id="@+id/signup_EI_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_EI_radio"
+        app:layout_constraintEnd_toStartOf="@id/signup_EI_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_EI_radio" />
+
+    <RadioGroup
+        android:id="@+id/signup_EI_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/signup_EI_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_age_spinner">
+
+        <RadioButton
+            android:id="@+id/rg_EI_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="E" />
+
+        <RadioButton
+            android:id="@+id/rg_EI_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="I" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/signup_NS_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_NS_radio"
+        app:layout_constraintEnd_toStartOf="@id/signup_NS_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_NS_radio" />
+
+    <RadioGroup
+        android:id="@+id/signup_NS_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/signup_NS_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_EI_radio">
+
+        <RadioButton
+            android:id="@+id/rg_NS_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="N" />
+
+        <RadioButton
+            android:id="@+id/rg_NS_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="S" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/signup_FT_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_FT_radio"
+        app:layout_constraintEnd_toStartOf="@id/signup_FT_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_FT_radio" />
+
+    <RadioGroup
+        android:id="@+id/signup_FT_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/signup_FT_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_NS_radio">
+
+        <RadioButton
+            android:id="@+id/rg_FT_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="F" />
+
+        <RadioButton
+            android:id="@+id/rg_FT_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="T" />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/signup_PJ_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MBTI : "
+        app:layout_constraintBottom_toBottomOf="@id/signup_PJ_radio"
+        app:layout_constraintEnd_toStartOf="@id/signup_PJ_radio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signup_PJ_radio" />
+    <RadioGroup
+        android:id="@+id/signup_PJ_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/signup_PJ_text"
+        app:layout_constraintTop_toBottomOf="@id/signup_FT_radio">
+
+        <RadioButton
+            android:id="@+id/rg_PJ_btn1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="P" />
+
+        <RadioButton
+            android:id="@+id/rg_PJ_btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="J" />
+
+    </RadioGroup>
+
+
+
+    <Button
+        android:id="@+id/signup_signUp_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_background"
+        android:text="회원 가입"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
