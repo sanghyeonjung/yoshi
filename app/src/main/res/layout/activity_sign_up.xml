@@ -6,28 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".Login.SignUpActivity">
 
+    <TextView
+        android:id="@+id/signup_describe1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="49dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="요시에 오신것을 환영합니다!"
+        android:textColor="#1E1E1E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signup_describe2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="23dp"
+        android:fontFamily="@font/pretendardmedium"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="앱 내 통계자료에 분석으로 위해 사용 되는 정보로
+이외의 용도로는 사용 되지 않습니다.
+아래의 정보들을 입력하고 회원가입을 완료해주세요!"
+        android:textColor="#B8B8B8"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/signup_describe1_text" />
+
     <EditText
         android:id="@+id/signup_name_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="23dp"
         android:background="@drawable/edit_background"
         android:hint="Name"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/signup_describe2_text" />
 
     <EditText
         android:id="@+id/signup_email_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="23dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="23dp"
         android:background="@drawable/edit_background"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -40,9 +72,9 @@
         android:id="@+id/signup_password_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="23dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginRight="23dp"
         android:background="@drawable/edit_background"
         android:hint="password"
         android:inputType="numberPassword"
@@ -55,6 +87,7 @@
         android:id="@+id/signup_gender_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="성별 : "
         app:layout_constraintBottom_toBottomOf="@id/signup_gender_radio"
         app:layout_constraintEnd_toStartOf="@id/signup_gender_radio"
@@ -65,6 +98,7 @@
         android:id="@+id/signup_gender_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toEndOf="@id/signup_gender_text"
         app:layout_constraintTop_toBottomOf="@id/signup_password_edit">
@@ -89,6 +123,7 @@
         android:id="@+id/signup_age_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="나이 : "
         app:layout_constraintBottom_toBottomOf="@id/signup_age_spinner"
         app:layout_constraintEnd_toStartOf="@id/signup_age_spinner"
@@ -106,6 +141,7 @@
         android:id="@+id/signup_EI_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="MBTI : "
         app:layout_constraintBottom_toBottomOf="@id/signup_EI_radio"
         app:layout_constraintEnd_toStartOf="@id/signup_EI_radio"
@@ -135,10 +171,12 @@
             android:text="I" />
 
     </RadioGroup>
+
     <TextView
         android:id="@+id/signup_NS_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="MBTI : "
         app:layout_constraintBottom_toBottomOf="@id/signup_NS_radio"
         app:layout_constraintEnd_toStartOf="@id/signup_NS_radio"
@@ -168,10 +206,12 @@
             android:text="S" />
 
     </RadioGroup>
+
     <TextView
         android:id="@+id/signup_FT_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="MBTI : "
         app:layout_constraintBottom_toBottomOf="@id/signup_FT_radio"
         app:layout_constraintEnd_toStartOf="@id/signup_FT_radio"
@@ -201,15 +241,18 @@
             android:text="T" />
 
     </RadioGroup>
+
     <TextView
         android:id="@+id/signup_PJ_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
         android:text="MBTI : "
         app:layout_constraintBottom_toBottomOf="@id/signup_PJ_radio"
         app:layout_constraintEnd_toStartOf="@id/signup_PJ_radio"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/signup_PJ_radio" />
+
     <RadioGroup
         android:id="@+id/signup_PJ_radio"
         android:layout_width="wrap_content"
@@ -233,7 +276,6 @@
             android:text="J" />
 
     </RadioGroup>
-
 
 
     <Button
