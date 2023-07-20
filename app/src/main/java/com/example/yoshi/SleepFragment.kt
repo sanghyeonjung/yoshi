@@ -31,7 +31,7 @@ class SleepFragment : Fragment() {
             val db = Firebase.firestore
             val uid = Firebase.auth.currentUser?.uid ?: ""
             if (uid != null) {
-                db.collection("uesrsvote").document(uid).collection("votes")
+                db.collection("usersvote").document(uid).collection("votes")
                     .get()
                     .addOnSuccessListener { documents ->
                         val voteList = documents.map {

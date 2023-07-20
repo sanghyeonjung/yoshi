@@ -33,14 +33,14 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/left_button"
+                android:id="@+id/left_button2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/baseline_thumb_down_24" />
 
             <ImageButton
-                android:id="@+id/right_button"
+                android:id="@+id/right_button2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

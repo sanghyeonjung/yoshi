@@ -107,9 +107,12 @@ class MakeFragment : Fragment() {
     private fun saveDocument(consCount :Int,prosCount:Int,title: String, subs:String, tags: String, references: String, description: String, imageUrl: String, onSuccess: () -> Unit) {
         //uid 가져오기
         val uid = Firebase.auth.currentUser?.uid ?: ""
+        //Log.d("SaveActivity", "uid: $uid")
         //val userId = "test"
 
         val voteData = hashMapOf(
+            "consCount" to consCount,
+            "prosCount" to prosCount,
             "title" to title,
             "tags" to tags,
             "references" to references,
