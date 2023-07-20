@@ -2,7 +2,10 @@ package com.yoshi.hackatonapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.yoshi.HomeFragment
+import com.example.yoshi.MakeFragment
 import com.example.yoshi.R
+import com.example.yoshi.SleepFragment
 import com.example.yoshi.VoteFragment
 import com.example.yoshi.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -50,3 +53,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+

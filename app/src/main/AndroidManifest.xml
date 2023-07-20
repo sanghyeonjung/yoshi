@@ -27,10 +27,13 @@
             android:name="com.yoshi.hackatonapp.Login.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name="com.yoshi.hackatonapp.MainActivity"
+            android:name=".SplashActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Vote"
+            android:exported="true" />
+        <activity
+            android:name="com.yoshi.hackatonapp.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

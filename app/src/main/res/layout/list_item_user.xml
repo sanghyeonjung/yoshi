@@ -41,10 +41,11 @@
         android:text="업무시간에 이어폰을 꽂은 신입. 선입이 보기엔 일이 아닌 노래에 집중한 것 같다. 하지만 신입은 일의 능률을 주장하며 자율적으로 허락해야한다고 말한 상황"
         android:textSize="14sp"
         android:textColor="#1E1E1E"
-        app:layout_constraintTop_toBottomOf="@id/main_subject"
-        app:layout_constraintStart_tostartOf="@id/main_subject"
+        app:layout_constraintTop_toBottomOf="@id/sub_subject"
+        app:layout_constraintStart_toStartOf="@id/main_subject"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/pretendardsemibold"
+
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

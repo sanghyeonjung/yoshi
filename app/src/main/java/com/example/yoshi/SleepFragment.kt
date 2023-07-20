@@ -1,12 +1,18 @@
-package com.yoshi.hackatonapp
+package com.example.yoshi
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.yoshi.databinding.FragmentSleepBinding
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,26 +25,37 @@ class SleepFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentSleepBinding.inflate(inflater, container, false)
-        val getTimeBtn = binding.sleepGettimeButton
-        val showBeforeTimeText = binding.sleepShowbeforetimeText
-        var start : Long = 0
+        val view = binding.root
 
-        Log.e("시간","suc")
-        getTimeBtn.setOnClickListener{
-            showBeforeTimeText.text = ""
-            Log.e("버튼안","suc")
-            start = System.currentTimeMillis()
-            val date = Date(start)
-            val mFormat = SimpleDateFormat("HH시mm분") // 현재 시간
-                //현재 시간 + 13분이 자는 시간
-            val time = mFormat.format(date)
-            Log.e("time : ",time)
-            for(i: Int in 1..6)
-            {
-
+        fun loadVotes(onSuccess: (List<VoteData>) -> Unit) {
+            val db = Firebase.firestore
+            val uid = Firebase.auth.currentUser?.uid ?: ""
+            if (uid != null) {
+                db.collection("uesrsvote").document(uid).collection("votes")
+                    .get()
+                    .addOnSuccessListener { documents ->
+                        val voteList = documents.map {
+                            it.toObject(VoteData::class.java)
+                        }
+                        onSuccess(voteList)
+                    }
+                    .addOnFailureListener { exception ->
+                        Log.w(TAG, "Error getting documents.", exception)
+                    }
             }
-            showBeforeTimeText.text = time
+            else{
+                Log.w(TAG, "Error getting documents.")
+            }
         }
+
+        val recyclerView = view.findViewById<RecyclerView>(R.id.RecyclerView)
+
+        loadVotes { votes ->
+            recyclerView.adapter = VoteAdapter(votes)
+            recyclerView.layoutManager = LinearLayoutManager(context)
+        }
+
+
         return binding.root
     }
 

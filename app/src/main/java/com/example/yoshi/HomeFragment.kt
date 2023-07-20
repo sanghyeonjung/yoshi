@@ -1,4 +1,4 @@
-package com.yoshi.hackatonapp
+package com.example.yoshi
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

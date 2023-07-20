@@ -6,20 +6,29 @@
     android:layout_height="match_parent"
     tools:context=".SleepFragment">
 
-    <Button
-        android:id="@+id/sleep_gettime_button"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+    <TextView
+        android:id="@+id/list_text_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="#1E1E1E"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="83dp"
+        android:fontFamily="@font/pretendardsemibold"
+        android:text="내가 작성한 질문" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/sleep_showbeforetime_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="수면시간 보여줌"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sleep_gettime_button" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
