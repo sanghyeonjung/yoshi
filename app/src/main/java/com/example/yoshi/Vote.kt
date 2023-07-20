@@ -45,7 +45,7 @@ class Vote : AppCompatActivity() {
         inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             // Add your view components here
             val topic_title: TextView = itemView.findViewById(R.id.topic_title)
-            val MainimageView: ImageView = itemView.findViewById(R.id.MainimageView)
+            //val MainimageView: ImageView = itemView.findViewById(R.id.MainimageView)
 
         }
 
@@ -66,9 +66,9 @@ class Vote : AppCompatActivity() {
             //글라이드 적용
             val imageUrl = document.getString("image")
             Log.d("VoteFragment", "imageUrl: $imageUrl")
-            Glide.with(this@Vote)
-                .load(imageUrl)
-                .into(holder.MainimageView)
+            //Glide.with(this@Vote)
+            //    .load(imageUrl)
+            //    .into(holder.MainimageView)
             //holder.MainimageView.setImageResource(R.drawable.ic_launcher_background)
 
         }
