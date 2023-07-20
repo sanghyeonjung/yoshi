@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -48,7 +47,6 @@ class VoteFragment : Fragment() {
     fun updateVoteData(document: DocumentSnapshot) {
         // Firestore에서 가져온 데이터를 통해 View를 업데이트합니다.
         val voteTitle = view?.findViewById<TextView>(R.id.topic_title)
-        val voteImg = view?.findViewById<ImageView>(R.id.MainimageView)
         val imageUrl = document.getString("image")
         //log image url
         Log.d("VoteFragment", "imageUrl: $imageUrl")
@@ -57,9 +55,9 @@ class VoteFragment : Fragment() {
         Log.d("VoteFragment", "DocumentSnapshot data: ${document.data}")
         voteTitle?.text = document.getString("title")
 
-        Glide.with(this)
-            .load(imageUrl)
-            .into(voteImg!!)
+        //Glide.with(this)
+        //    .load(imageUrl)
+        //    .into(voteImg!!)
 
 
         //voteDescription?.text = document.getString("description")

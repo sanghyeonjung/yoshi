@@ -16,7 +16,7 @@
         android:id="@+id/third"
         android:enabled="true"
         android:icon="@drawable/ic_launcher_foreground"
-        android:title="채팅"
+        android:title="질문 생성"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/four"
