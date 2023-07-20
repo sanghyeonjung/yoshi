@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     tools:context="com.yoshi.hackatonapp.Login.LoginActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sublogo"
+        app:layout_constraintBottom_toTopOf="@id/login_text_introduce1"
+        app:layout_constraintStart_toStartOf="@id/login_text_introduce1"
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/login_text_introduce1"
         android:layout_width="wrap_content"

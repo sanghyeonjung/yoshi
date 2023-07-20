@@ -2,6 +2,7 @@ package com.yoshi.hackatonapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.yoshi.MakeFragment
 import com.example.yoshi.R
 import com.example.yoshi.VoteFragment
 import com.example.yoshi.databinding.ActivityMainBinding
