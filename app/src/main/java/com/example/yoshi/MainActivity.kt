@@ -35,6 +35,12 @@ class MainActivity : AppCompatActivity() {
                             supportFragmentManager.beginTransaction()
                                 .replace(R.id.fl_container, settingFragment).commit()
                         }
+                        R.id.four -> {
+                            val voteFragment = VoteFragment()
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fl_container, voteFragment).commit()
+
+                        }
                     }
                     true
                 }

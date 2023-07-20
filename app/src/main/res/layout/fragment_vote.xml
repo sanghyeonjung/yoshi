@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context=".VoteFragment">
 
     <TextView
-        android:text="Topic"
-        android:textAlignment="center"
         android:id="@+id/topic_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/pretendardbold"
+        android:text="업무시간에 에어팟 사용?"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp" />
 
     <!-- 찬반 투표 선택, 좌우로 이미지 버튼 -->
@@ -21,19 +23,25 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/left_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/baseline_thumb_down_24" />
+            android:background="@drawable/vote_pros_button"
+            android:fontFamily="@font/pretendardbold"
+            android:text="찬성"
+            android:textColor="#0047FF" />
 
-        <ImageButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/right_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/baseline_thumb_up_24" />
+            android:background="@drawable/vote_cons_button"
+            android:fontFamily="@font/pretendardbold"
+            android:text="반대"
+            android:textColor="#FF0000" />
 
     </LinearLayout>
 

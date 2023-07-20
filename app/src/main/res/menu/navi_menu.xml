@@ -18,4 +18,10 @@
         android:icon="@drawable/ic_launcher_foreground"
         android:title="채팅"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/four"
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="투표"
+        app:showAsAction="ifRoom" />
 </menu>
