@@ -6,6 +6,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MakeFragment">
 
+    <TextView
+        android:id="@+id/question_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="질문 작성"
+        android:fontFamily="@font/pretendardsemibold"
+        android:textColor="#1E1E1E"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp" />
+
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/make_text_quiz"

@@ -3,6 +3,7 @@ package com.yoshi.hackatonapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.yoshi.R
+import com.example.yoshi.VoteFragment
 import com.example.yoshi.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -31,9 +32,16 @@ class MainActivity : AppCompatActivity() {
                                 .replace(R.id.fl_container, boardFragment).commit()
                         }
                         R.id.third -> {
+                            val settingFragment = MakeFragment()
                             val makeFragment = MakeFragment()
                             supportFragmentManager.beginTransaction()
-                                .replace(R.id.fl_container, makeFragment).commit()
+                                .replace(R.id.fl_container, settingFragment).commit()
+                        }
+                        R.id.four -> {
+                            val voteFragment = VoteFragment()
+                            supportFragmentManager.beginTransaction()
+                                .replace(R.id.fl_container, voteFragment).commit()
+
                         }
                     }
                     true
