@@ -52,7 +52,7 @@ class Vote : AppCompatActivity() {
         // Create new views (invoked by the layout manager)
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             // Replace 'my_view' with your layout's resource ID
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_vote, parent, false)
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_vote2, parent, false)
             return ViewHolder(view)
         }
 
