@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="230dp"
         android:textColor="@color/black"
         android:fontFamily="@font/pretendardmedium"
         android:text="당신의 건강을 더"
@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="@id/login_text_introduce3"
         app:layout_constraintTop_toBottomOf="@id/login_text_introduce3"
         android:layout_marginTop="16dp"
-        android:hint="아이디"
+        android:hint="이메일"
         android:textSize="15dp"
         android:backgroundTint="#EFEFEF"
         />

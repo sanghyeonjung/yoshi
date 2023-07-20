@@ -11,11 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/pretendardsemibold"
         android:text="요시에 오신것을 환영합니다!"
         android:textColor="#1E1E1E"
         android:textSize="24sp"
+        app:layout_goneMarginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +34,7 @@
 이외의 용도로는 사용 되지 않습니다.
 아래의 정보들을 입력하고 회원가입을 완료해주세요!"
         android:textColor="#B8B8B8"
-        android:textSize="24sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signup_describe1_text" />
@@ -42,11 +43,11 @@
         android:id="@+id/signup_name_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="23dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="23dp"
-        android:background="@drawable/edit_background"
-        android:hint="Name"
+        android:hint="이름"
+        android:backgroundTint="#EFEFEF"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,10 +58,10 @@
         android:id="@+id/signup_email_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="23dp"
-        android:background="@drawable/edit_background"
+        android:backgroundTint="#EFEFEF"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
@@ -72,10 +73,10 @@
         android:id="@+id/signup_password_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="23dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="23dp"
-        android:background="@drawable/edit_background"
+        android:backgroundTint="#EFEFEF"
         android:hint="password"
         android:inputType="numberPassword"
         android:paddingStart="15dp"
@@ -95,26 +96,40 @@
         app:layout_constraintTop_toTopOf="@id/signup_gender_radio" />
 
     <RadioGroup
+        android:layout_marginTop="10dp"
         android:id="@+id/signup_gender_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
+        android:layout_marginStart="9dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toEndOf="@id/signup_gender_text"
         app:layout_constraintTop_toBottomOf="@id/signup_password_edit">
 
         <RadioButton
             android:id="@+id/rg_btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
-            android:text="남자" />
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
+
+            android:text="남자"
+            />
 
         <RadioButton
             android:id="@+id/rg_btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="여자" />
 
     </RadioGroup>
@@ -131,11 +146,19 @@
         app:layout_constraintTop_toTopOf="@id/signup_age_spinner" />
 
     <Spinner
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/signup_age_spinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="302dp"
+        android:layout_height="35dp"
+        android:background="@drawable/selector_radio_button"
+        android:textColor="@drawable/selector_radio_text"
+        android:button="@null"
+        android:gravity="center"
         app:layout_constraintStart_toEndOf="@id/signup_age_text"
-        app:layout_constraintTop_toBottomOf="@id/signup_gender_radio"></Spinner>
+        app:layout_constraintTop_toBottomOf="@id/signup_gender_radio"/>
+
+
 
     <TextView
         android:id="@+id/signup_EI_text"
@@ -158,17 +181,31 @@
 
         <RadioButton
             android:id="@+id/rg_EI_btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="E" />
 
         <RadioButton
             android:id="@+id/rg_EI_btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="I" />
+            android:background="@drawable/selector_radio_button"
+            android:button="@null"
+            android:fontFamily="@font/pretendardsemibold"
+            android:gravity="center"
+            android:text="I"
+
+            android:textColor="@drawable/selector_radio_text" />
 
     </RadioGroup>
 
@@ -184,6 +221,7 @@
         app:layout_constraintTop_toTopOf="@id/signup_NS_radio" />
 
     <RadioGroup
+        android:layout_marginTop="10dp"
         android:id="@+id/signup_NS_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -193,16 +231,27 @@
 
         <RadioButton
             android:id="@+id/rg_NS_btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="N" />
 
         <RadioButton
             android:id="@+id/rg_NS_btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="S" />
 
     </RadioGroup>
@@ -223,21 +272,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toEndOf="@id/signup_FT_text"
         app:layout_constraintTop_toBottomOf="@id/signup_NS_radio">
 
         <RadioButton
             android:id="@+id/rg_FT_btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="F" />
 
         <RadioButton
             android:id="@+id/rg_FT_btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="T" />
 
     </RadioGroup>
@@ -254,6 +315,7 @@
         app:layout_constraintTop_toTopOf="@id/signup_PJ_radio" />
 
     <RadioGroup
+        android:layout_marginTop="10dp"
         android:id="@+id/signup_PJ_radio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -263,31 +325,44 @@
 
         <RadioButton
             android:id="@+id/rg_PJ_btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="P" />
 
         <RadioButton
             android:id="@+id/rg_PJ_btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="146dp"
+            android:layout_height="35dp"
             android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/pretendardsemibold"
+            android:background="@drawable/selector_radio_button"
+            android:textColor="@drawable/selector_radio_text"
+            android:button="@null"
+            android:gravity="center"
             android:text="J" />
 
     </RadioGroup>
 
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signup_signUp_btn"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_width="316dp"
+        android:layout_height="46dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/black"
         android:background="@drawable/btn_background"
         android:text="회원 가입"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
